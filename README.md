@@ -1,6 +1,6 @@
 ##About teemo 
 
-域名爆破工具
+域名收集及爆破工具
 
 提莫(teemo)是个侦察兵，域名的收集如同渗透和漏洞挖掘的侦察，故命名为提莫（Teemo）！
 
@@ -40,6 +40,27 @@
 
 - subbrute [https://github.com/TheRook/subbrute](https://github.com/TheRook/subbrute)
 
+##基本使用
+
+* 查看帮助:
+
+```python teemo.py -h```
+
+* 枚举指定域名（会使用搜索引擎和第三方站点模块）:
+
+``python teemo.py -d example.com``
+
+* 启用爆破模式:
+
+``python teemo.py -b -d example.com``
+
+* 将结果保存到指定文件(默认会跟进config.py中的设置保存到以域名命名的文件中):
+
+``python teemo.py -d example.com -o result.txt``
+
+* 收集域名并扫描指定端口 :
+
+``python teemo.py -d example.com -p 80,443``
 
 ##参考
 
@@ -65,3 +86,6 @@ Thanks for their sharing.
 
 1. 初始版本，单线程，速度慢，bug很多。但后续会持续更新改进。
 
+
+##相关思维导图
+![](http://i.imgur.com/FEPVijM.png)
